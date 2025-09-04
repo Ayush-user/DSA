@@ -2,9 +2,13 @@ class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] ans = { -1, -1 };
         ans[0] = bs(nums, target, true);
-        ans[1] = bs(nums, target, false);
+        if (ans[0] != -1) {
+        ans[1] = bs(nums, target, false);  
+        }
         return ans;
     }
+
+    
 
     public int bs(int[] nums, int target, boolean startIndex) {
         int ans = -1;
